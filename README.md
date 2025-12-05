@@ -1,6 +1,6 @@
-# 🪓 YOLOv8 Axe Detection - Treinamento e Detecção
+# 🪓 YOLOv8 Beverages Detection - Treinamento e Detecção
 
-Projeto de treinamento de modelo YOLOv8 para detecção de machados em imagens usando deep learning.
+Projeto de treinamento de modelo YOLOv8 para detecção de bebidas em imagens usando deep learning.
 
 ## 📋 Índice
 
@@ -115,7 +115,7 @@ av3-yolo-training/
 │       └── labels/
 └── runs/                  # Resultados do treinamento (gerado automaticamente)
     └── detect/
-        └── axe_detection/
+        └── beverage_detection/
             ├── weights/   # Pesos do modelo treinado
             ├── results.png
             └── confusion_matrix.png
@@ -194,6 +194,8 @@ Exibe:
 - Matriz de confusão
 - Predições em imagens de validação
 
+# Importante: Apesar do modelo ter sido treinado para a detecção de bebidas, o dataset deve ser carregado em "axe_dataset/" para manter a consistência com o código fornecido.
+
 #### **Célula 9: Testar com Imagem Customizada**
 ```python
 test_custom_image("caminho/para/sua/imagem.jpg")
@@ -264,7 +266,7 @@ Após o treinamento, os seguintes arquivos são criados em `runs/detect/axe_dete
 from ultralytics import YOLO
 
 # Carregar o modelo treinado
-model = YOLO('runs/detect/axe_detection/weights/best.pt')
+model = YOLO('runs/detect/beverage_detection/weights/best.pt')
 
 # Fazer predição
 results = model.predict('imagem.jpg', conf=0.25)
